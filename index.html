@@ -1,1495 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentra Ukir Jayapura - Workshop Cutting CNC, Router, Laser, Plasma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://via.placeholder.com/1920x1080?text=Workshop+Background') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
 
-    <title>Home | EstateBit Real Estate Theme Bootstrap HTML5 Template</title>
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 1s ease-in;
+        }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <!-- Fonts -->
-    <link rel="stylesheet" type="text/css" href="assets/fonts/line-icons.css">
-    <!-- Slicknav -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.css">
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
 
-    <!-- Range Slider -->
-    <link rel="stylesheet" type="text/css" href="assets/css/ion.rangeSlider.css">
-    <!-- Range Slider  -->
-    <link rel="stylesheet" type="text/css" href="assets/css/ion.rangeSlider.skinFlat.css">
-    <!-- Nivo Lightbox -->
-    <link rel="stylesheet" type="text/css" href="assets/css/nivo-lightbox.css" >
-    <!-- Animate -->
-    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-    <!-- Owl carousel -->
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
-    <!-- Rav Slider -->
-    <link rel="stylesheet" type="text/css" href="assets/extras/settings.css">
-    <link rel="stylesheet" type="text/css" href="assets/extras/layers.css">
-    <link rel="stylesheet" type="text/css" href="assets/extras/navigation.css">
-    <!-- Main Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-    <!-- Responsive Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-  </head>
-  <body>
+        nav a:hover {
+            color: #ffcc00;
+        }
 
-    <!-- Header Area wrapper Starts -->
-    <header id="header-wrap">
-      <!-- Start Top Bar -->
-      <div class="top-bar">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7 col-md-8 col-xs-12">
-              <!-- Start Contact Info -->
-              <ul class="links clearfix">
-                <li><i class="lni-phone-handset"></i>1-800-555-1234</li>
-                <li><i class="lni-envelope"></i> info@example.com</li>
-                <li><a href="#"><i class="lni-map-marker"></i> York Blvd, Los Angeles, US</a></li>
-              </ul>
-              <!-- End Contact Info -->
-            </div>
-            <div class="col-lg-5 col-md-4 col-xs-12">
-              <div class="roof-social float-right">
-                <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-                <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-                <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-                <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
-              </div>
-              <div class="header-top-right float-right">
-                <a href="login.html" class="header-top-button"><i class="lni-lock"></i> Log In</a> |
-                <a href="register.html" class="header-top-button"><i class="lni-pencil"></i> Register</a>
-              </div>
-            </div>
-          </div>
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero h2 {
+            font-size: 4rem; /* Judul besar */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            animation: typeWriter 3s steps(40, end);
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid white;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .cnc-animation {
+            position: absolute;
+            bottom: 20%;
+            right: 10%;
+        }
+
+        .router {
+            width: 50px;
+            height: 50px;
+            background: url('https://via.placeholder.com/50x50?text=CNC+Router') no-repeat;
+            animation: moveRouter 3s infinite;
+        }
+
+        .laser-beam {
+            width: 2px;
+            height: 100px;
+            background: red;
+            margin-top: 10px;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes moveRouter {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes typeWriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 1rem auto;
+            display: block;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .service {
+            flex: 1 1 200px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .materials {
+            list-style: disc;
+            padding-left: 1rem;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            font-size: 2rem;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ffcc00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Sentra Ukir Jayapura</h1>
+            <p>Workshop Jasa Cutting CNC, Router, Laser, Plasma</p>
         </div>
-      </div>
-      <!-- End Top Bar -->
-
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white"  data-toggle="sticky-onscroll">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              <span class="lin-menu"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt=""></a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="navbar-nav mr-auto w-100 justify-content-center">
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Home <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item active" href="index.html">Home V1</a>
-                  <a class="dropdown-item" href="index-2.html">Home V2</a>
-                  <a class="dropdown-item" href="index-3.html">Home V3</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Listing <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="listing.html">Simple Listing</a>
-                  <a class="dropdown-item" href="grid-listing.html">Grid Listing</a>
-                  <a class="dropdown-item" href="listing-map.html">List with Google Map</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Property <i class="fa fa-angle-down"></i>
-                </a>
-                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="property.html">Default- Variation</a>
-                  <a class="dropdown-item" href="single-property.html">Single Property</a>
-                  <a class="dropdown-item" href="full-gallery.html">Full Width Gallery</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Gallery <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="portfolio-2.html">2 Columns Gallery</a>
-                  <a class="dropdown-item" href="portfolio-3.html">3 Columns Gallery</a>
-                  <a class="dropdown-item" href="portfolio-4.html">4 Columns Gallery</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Pages <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="about.html">About Us</a>
-                  <a class="dropdown-item" href="agents.html">Agents</a>
-                  <a class="dropdown-item" href="rent.html">For Rent</a>
-                  <a class="dropdown-item" href="sale.html">For Sale</a>
-                  <a class="dropdown-item" href="pricing.html">Pricing Tables</a>
-                  <a class="dropdown-item" href="dashboard.html">Dashboard</a>
-                  <a class="dropdown-item" href="submit-property.html">Submission Form</a>
-                  <a class="dropdown-item" href="faq.html">FAQ</a>
-                  <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                  <a class="dropdown-item" href="typography.html">Typography</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Blog <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="blog.html">Blog Page</a>
-                  <a class="dropdown-item" href="single-blog.html">Blog Single Page</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">
-                  Contact Us
-                </a>
-              </li>
+        <nav>
+            <ul>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#layanan">Layanan Kami</a></li>
+                <li><a href="#bahan">Bahan Cutting</a></li>
+                <li><a href="#galeri">Foto Kerja</a></li>
+                <li><a href="#kontak">Alamat & Maps</a></li>
             </ul>
-            <div class="search-add float-right">
-              <form method="post">
-                <div class="form-group">
-                    <input type="search" name="field-name" value="" placeholder="Search Here" required="">
-                    <button type="submit" class="search-btn"><span class="lni-search"></span></button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile Menu Start -->
-        <ul class="mobile-menu">
-          <li>
-            <a class="active" href="index.html">
-            Home
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a class="active" href="index.html">
-                  Home V1
-                </a>
-              </li>  
-              <li>
-                <a href="index-2.html">
-                  Home V2
-                </a>
-              </li>   
-              <li>
-                <a href="index-3.html">
-                  Home V3
-                </a>
-              </li> 
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              Listing
-            </a>
-            <ul class="dropdown">
-              <li><a href="listing.html">Simple Listing</a></li>
-              <li><a href="grid-listing.html">Grid Listing</a></li>
-              <li><a href="listing-map.html">List with Google Map</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Property</a>
-             <ul class="dropdown">
-              <li><a href="property.html">Default- Variation</a></li>
-              <li><a href="single-property.html">Single Property</a></li>
-              <li><a href="full-gallery.html">Full Width Gallery</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">
-              Gallery
-            </a>
-            <ul class="dropdown">
-              <li><a href="portfolio-2.html">2 Columns Gallery</a></li>
-              <li><a href="portfolio-3.html">3 Columns Gallery</a></li>
-              <li><a href="portfolio-4.html">4 Columns Gallery</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Pages</a>
-            <ul class="dropdown">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="agents.html">Agents</a></li>
-              <li><a href="rent.html">For Rent</a></li>
-              <li><a href="sale.html">For Sale</a></li>
-              <li><a href="pricing.html">Pricing Tables</a></li>
-              <li><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="submit-property.html">Submission Form</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="typography.html">Typography</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-            <ul class="dropdown">
-              <li><a href="blog.html">Blog Page</a></li>
-              <li><a href="single-blog.html">Blog Single Page</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="contact.html">
-            Contact Us
-            </a>
-          </li>
-        </ul>
-        <!-- Mobile Menu End -->
-      </nav>
-      <!-- Navbar End -->
-      <div class="clearfix"></div>
+        </nav>
     </header>
-    <!-- Header Area wrapper End -->
 
-<section id="intro" class="section-intro">
-      <div class="search-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h4 class="intro-sub-heading">You are using Fre Lite Version!</h4>
-              <h2 class="intro-title">Please, Make Purchase Full Version to Get All Pages and Features</h2>
-              <a href="https://rebrand.ly/estatebit-purchase-ud" rel="nofollow" class="btn btn-danger btn-lg">PURCHASE NOW</a>
-            </div>
-          </div>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang di Sentra Ukir Jayapura</h2>
+            <p>Kami menyediakan jasa cutting presisi untuk berbagai kebutuhan.</p>
         </div>
-      </div>
+        <div class="cnc-animation">
+            <!-- Animasi CNC sederhana -->
+            <div class="router"></div>
+            <div class="laser-beam"></div>
+        </div>
     </section>
 
-    <!-- Intro Section Start -->
-    <div class="search-container">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">Search Properties</h2>
-            </div>
-          </div>
-        </div>
-        <div class="content">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-xs-12">
-              <div class="search-category-container">
-                <label class="styled-select">
-                  <select class="classic">
-                    <option>All Actions</option>
-                    <option>Rentals (12)</option>
-                    <option>Sales (17)</option>
-                  </select>
-                </label>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-xs-12">
-              <div class="search-category-container">
-                <label class="styled-select">
-                  <select class="classic">
-                    <option>All Types</option>
-                    <option>Apartments (3)</option>
-                    <option>Houses (2)</option>
-                    <option>Condos (1)</option>
-                    <option>Industrial (2)</option>
-                    <option>Land (3)</option>
-                    <option>Offices (1)</option>
-                    <option>Retail (2)</option>                              
-                    <option>Villas (1)</option>
-                  </select>
-                </label>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-xs-12">
-              <div class="search-category-container">
-                <label class="styled-select">
-                  <select class="classic">
-                    <option>All Cities</option>
-                    <option>New York</option>
-                    <option>California</option>
-                    <option>Washington</option>
-                    <option>Chicago</option>
-                    <option>Phoenix</option>
-                    <option>Birmingham</option>
-                  </select>
-                </label>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-xs-12">
-              <div class="text-right btn-section">
-                <button type="button" class="btn btn-common"><i class="lni-search"></i> Search</button>
-              </div>
-            </div>
-          </div>
-          <div class="row range-slider option-hide" style="display: none;">
-            <div class="col-lg-3 col-md-6 col-xs-12">
-              <div class="search-category-container">
-                <label class="styled-select">
-                  <select class="classic">
-                    <option>All Area</option>
-                    <option>San Jose</option>
-                    <option>Salt Lake City</option>
-                    <option>Las Vegas</option>
-                    <option>Boston</option>
-                    <option>Tampa</option>
-                    <option>Orlando</option>
-                  </select>
-                </label>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-xs-12">
-                <div class="search-category-container">
-                  <label class="styled-select">
-                    <select class="classic">
-                      <option>Bedrooms</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>                              
-                      <option>8</option>
-                    </select>
-                  </label>
-                </div>
-              </div>
-            <div class="col-lg-6 col-md-12 col-xs-12">
-              <!-- Page contents -->
-              <input type="text" id="range" value="" name="range" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 text-left">
-              <a href="#" class="show-options"> More options</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Intro Section End -->
-
-    <!-- Property Section Start -->
-    <section class="property section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">Popular Listings</h2>
-              <p>Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="property-main">
-              <div class="property-wrap">
-                <div class="property-item">
-                  <div class="item-thumb">
-                    <a class="hover-effect" href="property.html">
-                      <img class="img-fluid" src="assets/img/property/house-1.jpg" alt="">
-                    </a>
-                    <div class="label-inner">
-                      <span class="label-status label bg-red">For Sale</span>
-                    </div>
-                  </div>
-                  <div class="item-body">
-                    <h3 class="property-title"><a href="property.html">Amazing oceanfront apartment</a></h3>
-                    <div class="adderess"><i class="lni-map-marker"></i> Drive Street, Los Angeles, US</div>
-                    <div class="pricin-list">
-                      <div class="property-price">
-                        <span>$1,500</span>
-                      </div>
-                     <p><span>4 bds</span> . <span>4 ba</span> . <span>2500 Sqft</span></p>
-                    </div>
-                  </div>               
-                </div>              
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="property-main">
-              <div class="property-wrap">
-                <div class="property-item">
-                  <div class="item-thumb">
-                    <a class="hover-effect" href="property.html">
-                      <img class="img-fluid" src="assets/img/property/house-2.jpg" alt="">
-                    </a>
-                    <div class="label-inner">
-                      <span class="label-status label">For Rent</span>
-                    </div>
-                  </div>
-                  <div class="item-body">
-                    <h3 class="property-title"><a href="property.html">Family Condo</a></h3>
-                    <div class="adderess"><i class="lni-map-marker"></i> Louis, Missouri, US</div>
-                    <div class="pricin-list">
-                      <div class="property-price">
-                        <span>$27,00</span>
-                      </div>
-                     <p><span>6 bds</span> . <span>8 ba</span> . <span>2600 Sqft</span></p>
-                    </div>
-                  </div>               
-                </div>              
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="property-main">
-              <div class="property-wrap">
-                <div class="property-item">
-                  <div class="item-thumb">
-                    <a class="hover-effect" href="property.html">
-                      <img class="img-fluid" src="assets/img/property/house-3.jpg" alt="">
-                    </a>
-                    <div class="label-inner">
-                      <span class="label-status label bg-yellow">New</span>
-                    </div>
-                  </div>
-                  <div class="item-body">
-                    <h3 class="property-title"><a href="property.html">Guaranteed modern home</a></h3>
-                    <div class="adderess"><i class="lni-map-marker"></i> Avenue C, New York, US</div>
-                    <div class="pricin-list">
-                      <div class="property-price">
-                        <span>$1,750</span>
-                      </div>
-                     <p><span>8 bds</span> . <span>8 ba</span> . <span>3000 Sqft</span></p>
-                    </div>
-                  </div>               
-                </div>              
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="property-main">
-              <div class="property-wrap">
-                <div class="property-item">
-                  <div class="item-thumb">
-                    <a class="hover-effect" href="property.html">
-                      <img class="img-fluid" src="assets/img/property/house-4.jpg" alt="">
-                    </a>
-                    <div class="label-inner">
-                      <span class="label-status label">For Rent</span>
-                    </div>
-                  </div>
-                  <div class="item-body">
-                    <h3 class="property-title"><a href="property.html">Family home for sale</a></h3>
-                    <div class="adderess"><i class="lni-map-marker"></i> Sacramento, Chicago, US</div>
-                    <div class="pricin-list">
-                      <div class="property-price">
-                        <span>$1,400</span>
-                      </div>
-                     <p><span>2 bds</span> . <span>2 ba</span> . <span>2200 Sqft</span></p>
-                    </div>
-                  </div>               
-                </div>              
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="property-main">
-              <div class="property-wrap">
-                <div class="property-item">
-                  <div class="item-thumb">
-                    <a class="hover-effect" href="property.html">
-                      <img class="img-fluid" src="assets/img/property/house-5.jpg" alt="">
-                    </a>
-                    <div class="label-inner">
-                      <span class="label-status label bg-yellow">New</span>
-                    </div>
-                  </div>
-                  <div class="item-body">
-                    <h3 class="property-title"><a href="property.html">Amazing oceanfront apartment</a></h3>
-                    <div class="adderess"><i class="lni-map-marker"></i> 53 W 88th St, Dallas, US</div>
-                    <div class="pricin-list">
-                      <div class="property-price">
-                        <span>$1,750</span>
-                      </div>
-                     <p><span>6 bds</span> . <span>6 ba</span> . <span>2700 Sqft</span></p>
-                    </div>
-                  </div>               
-                </div>              
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="property-main">
-              <div class="property-wrap">
-                <div class="property-item">
-                  <div class="item-thumb">
-                    <a class="hover-effect" href="property.html">
-                      <img class="img-fluid" src="assets/img/property/house-6.jpg" alt="">
-                    </a>
-                    <div class="label-inner">
-                      <span class="label-status label bg-red">For Sale</span>
-                    </div>
-                  </div>
-                  <div class="item-body">
-                    <h3 class="property-title"><a href="property.html">Luxury home for sale</a></h3>
-                    <div class="adderess"><i class="lni-map-marker"></i> 365 Webber Street, Washington</div>
-                    <div class="pricin-list">
-                      <div class="property-price">
-                        <span>$1,800</span>
-                      </div>
-                     <p><span>5 bds</span> . <span>7 ba</span> . <span>2800 Sqft</span></p>
-                    </div>
-                  </div>               
-                </div>              
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="text-center">
-              <a href="listing.html" class="btn btn-common">Browse All</a>
-            </div> 
-          </div>  
-        </div>
-      </div>
-    </section>
-    <!-- Property Section End -->   
-
-    <!-- Team Section Start -->
-    <section id="team" class="section-padding text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">Our Agents</h2>
-              <p>Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <!-- Team Item Starts -->
-            <div class="team-item text-center">
-              <div class="team-img">
-                <img class="img-fluid" src="assets/img/team/team-01.jpg" alt="">
-                <div class="team-overlay">
-                  <div class="overlay-social-icon text-center">
-                    <ul class="social-icon-team">
-                      <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-linkedin-filled" aria-hidden="true"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="info-text">
-                <h3><a href="#">David Givens</a></h3>
-                <p>Real Estate Agent</p>
-              </div>
-            </div>
-            <!-- Team Item Ends -->
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <!-- Team Item Starts -->
-            <div class="team-item text-center">
-              <div class="team-img">
-                <img class="img-fluid" src="assets/img/team/team-02.jpg" alt="">
-                <div class="team-overlay">
-                  <div class="overlay-social-icon text-center">
-                    <ul class="social-icon-team">
-                      <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-linkedin-filled" aria-hidden="true"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="info-text">
-                <h3><a href="#">John Doe</a></h3>
-                <p>Real Estate Agent</p>
-              </div>
-            </div>
-            <!-- Team Item Ends -->
-          </div>
-
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <!-- Team Item Starts -->
-            <div class="team-item text-center">
-              <div class="team-img">
-                <img class="img-fluid" src="assets/img/team/team-03.jpg" alt="">
-                <div class="team-overlay">
-                  <div class="overlay-social-icon text-center">
-                    <ul class="social-icon-team">
-                      <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-linkedin-filled" aria-hidden="true"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="info-text">
-                <h3><a href="#">Darrell S.Allen</a></h3>
-                <p>Real Estate Agent</p>
-              </div>
-            </div>
-            <!-- Team Item Ends -->
-          </div>
-
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <!-- Team Item Starts -->
-            <div class="team-item text-center">
-              <div class="team-img">
-                <img class="img-fluid" src="assets/img/team/team-04.jpg" alt="">
-                <div class="team-overlay">
-                  <div class="overlay-social-icon text-center">
-                    <ul class="social-icon-team">
-                      <li><a href="#"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="lni-linkedin-filled" aria-hidden="true"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="info-text">
-                <h3><a href="#">Justyna Michallek</a></h3>
-                <p>Real Estate Agent</p>
-              </div>
-            </div>
-            <!-- Team Item Ends -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Team Section End -->
-
-    <!-- Services Section Start -->
-    <section class="services section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">Common Features</h2>
-              <p>Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="0.2s">
-              <div class="icon">
-                <i class="lni-apartment"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Full Furnished</a></h3>
-                <p>Lorem must explain to you how all this mistaolt dete denouncing pleasure and pralsing plan wasnad</p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="0.4s">
-              <div class="icon">
-                <i class="lni-crown"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Royal Touch Paint</a></h3>
-                <p>Lorem must explain to you how all this mistaolt dete denouncing pleasure and pralsing plan wasnad</p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
-              <div class="icon">
-                <i class="lni-layers"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Letest Interior Design</a></h3>
-                <p>Lorem must explain to you how all this mistaolt dete denouncing pleasure and pralsing plan wasnad</p>
-              </div>
-            </div>
-          </div>
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="0.8s">
-              <div class="icon">
-                <i class="lni-bolt-alt"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Non Stop Security</a></h3>
-                <p>Lorem must explain to you how all this mistaolt dete denouncing pleasure and pralsing plan wasnad</p>
-              </div>
-            </div>
-          </div>
-           <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="1s">
-              <div class="icon">
-                <i class="lni-leaf"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Living Inside a Nature</a></h3>
-                <p>Lorem must explain to you how all this mistaolt dete denouncing pleasure and pralsing plan wasnad</p>
-              </div>
-            </div>
-          </div>
-           <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
-              <div class="icon">
-                <i class="lni-medall"></i>
-              </div>
-              <div class="services-content">
-                <h3><a href="#">Luxurious Fittings</a></h3>
-                <p>Lorem must explain to you how all this mistaolt dete denouncing pleasure and pralsing plan wasnad</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Services Section End -->
-
-    <!-- Latest Property Start -->
-    <section class="latest-property section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">Latest Listings</h2>
-              <p>Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 wow fadeIn" data-wow-delay="0.8s">
-            <div id="latest-property" class="owl-carousel">
-              <div class="item">
-                <div class="property-main">
-                  <div class="property-wrap">
-                    <div class="property-item">
-                      <div class="item-thumb">
-                        <a class="hover-effect" href="property.html">
-                          <img class="img-fluid" src="assets/img/property/house-1.jpg" alt="">
-                        </a>
-                        <div class="label-inner">
-                          <span class="label-status label bg-red">For Sale</span>
-                        </div>
-                      </div>
-                      <div class="item-body">
-                        <h3 class="property-title"><a href="property.html">Amazing oceanfront apartment</a></h3>
-                        <div class="adderess"><i class="lni-map-marker"></i> 96 Bay 10th St, Brooklyn, NY 11228</div>
-                        <div class="pricin-list">
-                          <div class="property-price">
-                            <span>$1,600</span>
-                          </div>
-                         <p><span>4 bds</span> . <span>4 ba</span> . <span>2500 Sqft</span></p>
-                        </div>
-                      </div>               
-                    </div>              
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="property-main">
-                  <div class="property-wrap">
-                    <div class="property-item">
-                      <div class="item-thumb">
-                        <a class="hover-effect" href="property.html">
-                          <img class="img-fluid" src="assets/img/property/house-2.jpg" alt="">
-                        </a>
-                        <div class="label-inner">
-                          <span class="label-status label">For Rent</span>
-                        </div>
-                      </div>
-                      <div class="item-body">
-                        <h3 class="property-title"><a href="property.html">Family Condo</a></h3>
-                        <div class="adderess"><i class="lni-map-marker"></i> Louis, Missouri, US</div>
-                        <div class="pricin-list">
-                          <div class="property-price">
-                            <span>$1,700</span>
-                          </div>
-                          <p><span>8 bds</span> . <span>8 ba</span> . <span>2900 Sqft</span></p>
-                        </div>
-                      </div>               
-                    </div>              
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="property-main">
-                  <div class="property-wrap">
-                    <div class="property-item">
-                      <div class="item-thumb">
-                        <a class="hover-effect" href="property.html">
-                          <img class="img-fluid" src="assets/img/property/house-3.jpg" alt="">
-                        </a>
-                        <div class="label-inner">
-                          <span class="label-status label bg-yellow">New</span>
-                        </div>
-                      </div>
-                      <div class="item-body">
-                        <h3 class="property-title"><a href="property.html">Guaranteed modern home</a></h3>
-                        <div class="adderess"><i class="lni-map-marker"></i> Avenue C, New York, US</div>
-                        <div class="pricin-list">
-                          <div class="property-price">
-                            <span>$1,750</span>
-                          </div>
-                          <p><span>5 bds</span> . <span>6 ba</span> . <span>2700 Sqft</span></p>
-                        </div>
-                      </div>               
-                    </div>              
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="property-main">
-                  <div class="property-wrap">
-                    <div class="property-item">
-                      <div class="item-thumb">
-                        <a class="hover-effect" href="property.html">
-                          <img class="img-fluid" src="assets/img/property/house-4.jpg" alt="">
-                        </a>
-                        <div class="label-inner">
-                          <span class="label-status label">For Rent</span>
-                        </div>
-                      </div>
-                      <div class="item-body">
-                        <h3 class="property-title"><a href="property.html">Family home for sale</a></h3>
-                        <div class="adderess"><i class="lni-map-marker"></i> Sacramento, Chicago, US</div>
-                        <div class="pricin-list">
-                          <div class="property-price">
-                            <span>$1,400</span>
-                          </div>
-                          <p><span>2 bds</span> . <span>2 ba</span> . <span>2200 Sqft</span></p>
-                        </div>
-                      </div>               
-                    </div>              
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="property-main">
-                  <div class="property-wrap">
-                    <div class="property-item">
-                      <div class="item-thumb">
-                        <a class="hover-effect" href="property.html">
-                          <img class="img-fluid" src="assets/img/property/house-5.jpg" alt="">
-                        </a>
-                        <div class="label-inner">
-                          <span class="label-status label bg-yellow">New</span>
-                        </div>
-                      </div>
-                      <div class="item-body">
-                        <h3 class="property-title"><a href="property.html">Amazing oceanfront apartment</a></h3>
-                        <div class="adderess"><i class="lni-map-marker"></i> 53 W 88th St, Dallas, US</div>
-                        <div class="pricin-list">
-                          <div class="property-price">
-                            <span>$1,750</span>
-                          </div>
-                          <p><span>6 bds</span> . <span>6 ba</span> . <span>2700 Sqft</span></p>
-                        </div>
-                      </div>               
-                    </div>              
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="property-main">
-                  <div class="property-wrap">
-                    <div class="property-item">
-                      <div class="item-thumb">
-                        <a class="hover-effect" href="property.html">
-                          <img class="img-fluid" src="assets/img/property/house-6.jpg" alt="">
-                        </a>
-                        <div class="label-inner">
-                          <span class="label-status label bg-red">For Sale</span>
-                        </div>
-                      </div>
-                      <div class="item-body">
-                        <h3 class="property-title"><a href="property.html">Luxury home for sale</a></h3>
-                        <div class="adderess"><i class="lni-map-marker"></i> 365 Webber Street, Washington</div>
-                        <div class="pricin-list">
-                          <div class="property-price">
-                            <span>$1,800</span>
-                          </div>
-                         <p><span>5 bds</span> . <span>7 ba</span> . <span>2800 Sqft</span></p>
-                        </div>
-                      </div>               
-                    </div>              
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-        </div>
-      </div>
-    </section>
-    <!-- Latest Property End --> 
-
-
-    <!-- Featured Section Start -->
-    <section class="featured-bg section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">About Us</h2>
-              <p>Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-6 col-xs-12">
-            <img class="img-fluid" src="assets/img/about/img-2.jpg" alt="">
-          </div>
-          <div class="col-md-12 col-lg-6 col-xs-12">
-            <h2 class="intro-title">Who We Are</h2>
-            <h3 class="title-sub">Best and Award Winning <br>Real Estate Business in USA 2019</h3>
-            <p class="intro-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum, doloremque quaerat sit tempora eius est reiciendis accusamus magnam quae. Explicabo dolore officia, iure a ullam aliquam nemo excepturi, repellat. uod ut delectus ad tempora.
-            </p>
-            <div class="row">
-              <div class="col-lg-6 col-md-12 col-xs-12">
-                <div class="featured-item">
-                  <div class="icon">
-                    <i class="lni-medall"></i>
-                  </div>
-                  <h3><a href="#">Cretified Company</a></h3>
-                  <div class="featured-content">
-                    <p>We'll generate a sitemap for your site, submit it to search engine is and track crawler access.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-xs-12">
-                <div class="featured-item">
-                  <div class="icon">
-                    <i class="lni-thumbs-up"></i>
-                  </div>
-                  <h3><a href="#">Highly experienced</a></h3>
-                  <div class="featured-content">
-                    <p>We'll generate a sitemap for your site, submit it to search engine is and track crawler access.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Featured Section End -->
-     
-
-    <!-- Counter Area Start-->
-    <section class="counter-section section-padding" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row">
-          <!-- Counter Item -->
-          <div class="col-lg-3 col-md-6 col-xs-12 work-counter-widget text-center">
-            <div class="counter">
-              <div class="icon"><i class="lni-users"></i></div>
-              <div class="counterUp">6252</div>
-              <p>Happy Customers</p>
-            </div>
-          </div>
-          <!-- Counter Item -->
-          <div class="col-lg-3 col-md-6 col-xs-12 work-counter-widget text-center">
-            <div class="counter">
-              <div class="icon"><i class="lni-apartment"></i></div>
-              <div class="counterUp">3091</div>
-              <p>Completed Projects</p>
-            </div>
-          </div>
-          <!-- Counter Item -->
-          <div class="col-lg-3 col-md-6 col-xs-12 work-counter-widget text-center">
-            <div class="counter">
-              <div class="icon"><i class="lni-key"></i></div>
-               <div class="counterUp">1200</div>
-              <p>Property Sold</p>
-            </div>
-          </div>
-          <!-- Counter Item -->
-          <div class="col-lg-3 col-md-6 col-xs-12 work-counter-widget text-center">
-            <div class="counter">
-              <div class="icon"><i class="lni-cup"></i></div>
-              <div class="counterUp">79</div>
-              <p>Awards Win</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Counter Area End-->
-
-<section id="intro" class="section-intro">
-      <div class="search-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h4 class="intro-sub-heading">You are using Fre Lite Version!</h4>
-              <h2 class="intro-title">Please, Make Purchase Full Version to Get All Pages and Features</h2>
-              <a href="https://rebrand.ly/estatebit-purchase-ud" rel="nofollow" class="btn btn-danger btn-lg">PURCHASE NOW</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section id="tentang" class="section">
+        <h2>Tentang Kami</h2>
+        <img src="https://via.placeholder.com/200x200?text=Foto+Profil+Workshop" alt="Foto Profil Workshop" class="profile-photo">
+        <p>Sentra Ukir Jayapura adalah workshop terdepan di Jayapura yang spesialis dalam jasa cutting menggunakan teknologi CNC, router, laser, dan plasma. Dengan pengalaman bertahun-tahun, kami berkomitmen untuk memberikan hasil presisi tinggi untuk proyek-proyek kayu, logam, akrilik, dan bahan lainnya. Tim kami terdiri dari ahli yang terampil, menggunakan mesin modern untuk memastikan kualitas terbaik.</p>
     </section>
 
-    <!-- Client Logo Section Start -->
-    <section id="clients-logo" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img1.png" alt=""></a>
+    <section id="layanan" class="section">
+        <h2>Layanan Kami</h2>
+        <div class="services">
+            <div class="service">
+                <h3>CNC Cutting</h3>
+                <p>Pemotongan presisi menggunakan mesin CNC untuk bahan kayu, plastik, dan logam. Cocok untuk prototipe dan produksi massal.</p>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img2.png" alt=""></a>
+            <div class="service">
+                <h3>Router Cutting</h3>
+                <p>Jasa routing untuk ukiran detail pada kayu dan komposit. Ideal untuk furniture dan dekorasi.</p>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img3.png" alt=""></a>
+            <div class="service">
+                <h3>Laser Cutting</h3>
+                <p>Pemotongan laser untuk bahan tipis seperti akrilik, kertas, dan kain. Akurat dan cepat tanpa kontak fisik.</p>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img4.png" alt=""></a>
+            <div class="service">
+                <h3>Plasma Cutting</h3>
+                <p>Pemotongan plasma untuk logam tebal seperti baja dan aluminium. Digunakan untuk konstruksi dan industri.</p>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img5.png" alt=""></a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-xs-12">
-            <div class="client-logo">
-              <a href="#"><img class="img-fluid" src="assets/img/clients/img6.png" alt=""></a>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
-    <!-- Cleint Logo Section End -->
 
-    <!-- Pricing Table -->
-    <section class="pricing section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">Pricing Plans</h2>
-              <p>Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Single Table -->
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="pricing-table text-center">
-              <div class="table-header">
-                <h3>
-                  Personal
-                </h3>
-              </div>
-              <div class="plan">
-                <h3 class="price">
-                  $99
-                </h3>
-                <p class="period">
-                  NO DISCOUNT ON RENEWAL
-                </p>
-              </div>
-              <div class="plan-info">
-                <p>
-                  <strong><i class="lni-check-box"></i> Ad Visibility: 3 Months</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <p>
-                  <strong><i class="lni-check-box"></i> Number of Ads: 15</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <p>
-                  <strong><i class="lni-check-box"></i> Featured Ads: 5</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <div class="button-area">
-                  <a href="#" class="btn btn-common btn-lg">
-                    Get Started Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Single Table -->
-         <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="pricing-table pricing-active text-center">
-              <div class="table-header">
-                <h3>
-                  Business
-                </h3>
-              </div>
-              <div class="plan">
-                <h3 class="price">
-                  $199
-                </h3>
-                <p class="period">
-                  10% Discount on renewal
-                </p>
-              </div>
-              <div class="plan-info">
-                <p>
-                  <strong><i class="lni-check-box"></i> Ad Visibility: 5 Months</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <p>
-                  <strong><i class="lni-check-box"></i> Number of Ads: 50</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <p>
-                  <strong><i class="lni-check-box"></i> Featured Ads: 10</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <div class="button-area">
-                  <a href="#" class="btn btn-common btn-lg">
-                    Get Started Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Single Table -->
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="pricing-table text-center">
-              <div class="table-header">
-                <h3>
-                  Ultimate
-                </h3>
-              </div>
-              <div class="plan">
-                <h3 class="price">
-                  $999
-                </h3>
-                <p class="period">
-                  20% Discount on renewal
-                </p>
-              </div>
-              <div class="plan-info">
-                <p>
-                  <strong><i class="lni-check-box"></i> Ad Visibility: 12 Months</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <p>
-                  <strong><i class="lni-check-box"></i> Number of Ads: 100</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <p>
-                  <strong><i class="lni-check-box"></i> Featured Ads: 30</strong>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                </p>
-                <div class="button-area">
-                  <a href="#" class="btn btn-common btn-lg">
-                    Get Started Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section id="bahan" class="section">
+        <h2>Bahan Cutting</h2>
+        <ul class="materials">
+            <li>Kayu (plywood, MDF, solid wood)</li>
+            <li>Logam (baja, aluminium, stainless steel)</li>
+            <li>Akrilik dan plastik</li>
+            <li>Kaca dan keramik</li>
+            <li>Kain dan kulit</li>
+            <li>Komposit dan foam</li>
+        </ul>
+        <p>Kami menerima bahan custom sesuai permintaan. Hubungi kami untuk konsultasi.</p>
     </section>
-    <!-- Pricing Table End -->
 
-    <!-- Testimonial Section Start -->
-    <section class="testimonial section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div id="testimonials" class="owl-carousel">
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content">
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
-                  </div>
-                </div>
-                <div class="client-info">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img1.png" alt="">
-                  </div>
-                  <div class="info-text">
-                    <h2><a href="#">Michael Papirov</a></h2>
-                    <h4><a href="#">Customer</a></h4>
-                  </div>
-                </div>
-              </div>
-             <div class="item">
-                <div class="testimonial-item">
-                  <div class="content">
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
-                  </div>
-                </div>
-                <div class="client-info">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img2.png" alt="">
-                  </div>
-                  <div class="info-text">
-                    <h2><a href="#">Josh Rossi</a></h2>
-                    <h4><a href="#">Manager</a></h4>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content">
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
-                  </div>
-                </div>
-                <div class="client-info">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img3.png" alt="">
-                  </div>
-                  <div class="info-text">
-                    <h2><a href="#">Daniel Greem</a></h2>
-                    <h4><a href="#">Customer</a></h4>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content">
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
-                  </div>
-                </div>
-                <div class="client-info">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img4.png" alt="">
-                  </div>
-                  <div class="info-text">
-                    <h2><a href="#">John Doe</a></h2>
-                    <h4><a href="#">Manager</a></h4>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial-item">
-                  <div class="content">
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo quidem, excepturi facere magnam illum, at accusantium doloremque odio.</p>
-                  </div>
-                </div>
-                <div class="client-info">
-                  <div class="img-thumb">
-                    <img src="assets/img/testimonial/img5.png" alt="">
-                  </div>
-                  <div class="info-text">
-                    <h2><a href="#">Michael Papirov</a></h2>
-                    <h4><a href="#">Customer</a></h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section id="galeri" class="section">
+        <h2>Foto Kerja</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300x200?text=CNC+Cutting+Kayu" alt="CNC Cutting Kayu">
+            <img src="https://via.placeholder.com/300x200?text=Laser+Cutting+Akrilik" alt="Laser Cutting Akrilik">
+            <img src="https://via.placeholder.com/300x200?text=Plasma+Cutting+Logam" alt="Plasma Cutting Logam">
+            <img src="https://via.placeholder.com/300x200?text=Router+Ukiran" alt="Router Ukiran">
         </div>
-      </div>
+        <p>Ganti gambar placeholder ini dengan foto kerja asli Anda.</p>
     </section>
-    <!-- Testimonial Section End -->
 
-    <!-- Blog Section Start -->
-    <section id="blog" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">The Blog</h2>
-              <p>Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="blog-item text-center">
-              <div class="blog-image">
-                <a href="#">
-                  <img class="img-fluid" src="assets/img/blog/img1.jpg" alt="">
-                </a>
-              </div>
-              <div class="date">12 April, 2018</div>
-              <div class="descr">
-                <h3 class="title">
-                  <a href="single-blog.html">
-                    Visual Design Concept
-                  </a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium fugiat, eius sint.</p>
-              </div>
-              <div class="blog-footer hide-on-list">
-                <div class="float-left">
-                  <p class="prop-user"><a href="#"><i class="lni-user"></i> Admin</a></p>
-                </div>
-                <div class="float-right">
-                  <span><i class="lni-heart"></i> 350</span>
-                  <span><i class="lni-comments"></i> 30</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="blog-item text-center">
-              <div class="blog-image">
-                <a href="#">
-                  <img class="img-fluid" src="assets/img/blog/img2.jpg" alt="">
-                </a>
-              </div>
-              <div class="date">12 April, 2018</div>
-              <div class="descr">
-                <h3 class="title">
-                  <a href="single-blog.html">
-                    Real Estate Feswtival - 2018
-                  </a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium fugiat, eius sint.</p>
-              </div>
-              <div class="blog-footer hide-on-list">
-                <div class="float-left">
-                  <p class="prop-user"><a href="#"><i class="lni-user"></i> Admin</a></p>
-                </div>
-                <div class="float-right">
-                  <span><i class="lni-heart"></i> 350</span>
-                  <span><i class="lni-comments"></i> 30</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-xs-12">
-            <div class="blog-item text-center">
-              <div class="blog-image">
-                <a href="#">
-                  <img class="img-fluid" src="assets/img/blog/img3.jpg" alt="">
-                </a>
-              </div>
-              <div class="date">12 April, 2018</div>
-              <div class="descr">
-                <h3 class="title">
-                  <a href="single-blog.html">
-                    Latest Architectural Design
-                  </a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias laudantium fugiat, eius sint.</p>
-              </div>
-              <div class="blog-footer hide-on-list">
-                <div class="float-left">
-                  <p class="prop-user"><a href="#"><i class="lni-user"></i> Admin</a></p>
-                </div>
-                <div class="float-right">
-                  <span><i class="lni-heart"></i> 350</span>
-                  <span><i class="lni-comments"></i> 30</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section id="kontak" class="section">
+        <h2>Alamat & Google Maps</h2>
+        <p>Alamat: Jl. Contoh No. 123, Jayapura, Papua, Indonesia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789012!2d140.718123456789!3d-2.531234567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMzInMDQuNCJTIDE0MMKwNDMnMDcuMyJF!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <p>Ganti embed ini dengan alamat Google Maps asli workshop Anda. Cari di Google Maps, klik "Share", pilih "Embed a map".</p>
+        
+        <h3>Hubungi Kami</h3>
+        <div class="social-links">
+            <a href="https://wa.me/628xxxxxxxxx" target="_blank" title="WhatsApp">📱 WhatsApp</a>
+            <a href="https://www.instagram.com/sentraukirjayapura" target="_blank" title="Instagram">📷 Instagram</a>
+            <a href="https://www.tiktok.com/@sentraukirjayapura" target="_blank" title="TikTok">🎥 TikTok</a>
         </div>
-      </div>
     </section>
-    <!-- Blog Section End -->
 
-    <!-- Footer Section Start -->
-    <footer id="footer" class="footer-area section-padding">
-      <div class="container">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">About <span>Us</span></h3>
-              <ul class="footer-link">
-                <li><a href="#">Company</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Graphic Design</a></li>           
-                <li><a href="#">Documentation</a></li>           
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Usefull<span> Links</span></h3>
-              <ul class="footer-link">
-                <li><a href="#">Bayonne, New York</a></li>
-                <li><a href="#">Greenville, Chicago</a></li>
-                <li><a href="#">The Heights, New Jersey</a></li>
-                <li><a href="#">Bayonne, Washington DC</a></li>
-                <li><a href="#">Greenville, San Francisco</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Contact <span>Info</span></h3>
-              <ul class="address">
-                <li>
-                  <a href="#"><i class="lni-map-marker"></i> York Blvd, Los Angeles, US<br> View, CA 94041USA</a>
-                </li>
-                <li>
-                  <a href="#"><i class="lni-phone-handset"></i> (518) 2014-040 43</a>
-                </li>
-                <li>
-                  <a href="#"><i class="lni-envelope"></i> hello@example.com</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-              <h3 class="footer-titel">Subscribe <span>on Our News</span></h3>
-              <form method="post" id="subscribe-form" name="subscribe-form" class="validate">
-                <div class="form-group is-empty">
-                  <input type="email" value="" name="Email" class="form-control" id="EMAIL" placeholder="Email address" required="">
-                  <button type="submit" name="subscribe" id="subscribes" class="btn btn-common sub-btn"><i class="lni-envelope"></i></button>
-                  <div class="clearfix"></div>
-                </div>
-              </form>
-              <div class="social-icon">
-                <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-                <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-                <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-                <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>  
-      </div>     
-    </footer> 
-    <!-- Footer Section End -->
+    <footer>
+        <p>&copy; 2023 Sentra Ukir Jayapura. Semua hak dilindungi.</p>
+    </footer>
 
-    <section id="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>Copyright Â© 2018 <a rel="nofollow" href="https://uideck.com">UIdeck</a> All Right Reserved</p>
-          </div>
-        </div>
-      </div>
-    </section> 
+    <script>
+        // Smooth scrolling untuk navigasi
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-    <!-- Go to Top Link -->
-    <a href="#" class="back-to-top">
-      <i class="lni-chevron-up"></i>
-    </a>
-      
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="loader" id="loader-1"></div>
-    </div>
-    <!-- End Preloader -->
+        // Intersection Observer untuk animasi fade-in saat scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        });
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/js/jquery-min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.mixitup.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/ion.rangeSlider.js"></script>
-    <script src="assets/js/jquery.parallax.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/nivo-lightbox.js"></script>
-    <script src="assets/js/jquery.slicknav.js"></script>
-    <script src="assets/js/main.js"></script>
-    
-  </body>
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
