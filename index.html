@@ -3,34 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sentra Ukir Jayapura | CNC Cutting & Advertising</title>
+<title>Sentra Ukir Jayapura | Jasa Cutting CNC & Advertising</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+}
+
+header{
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+width:100%;
+background:#111827;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#00d084;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d084;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1500&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:#00d084;
+color:#fff;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+}
+
+section{
+padding:80px 8%;
+}
+
+.title{
+font-size:34px;
+margin-bottom:40px;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:10px;
+color:#00d084;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact h3{
+margin-bottom:20px;
+}
+
+footer{
+background:#111827;
+padding:20px;
+text-align:center;
+color:#aaa;
+}
+</style>
+
 </head>
 
 <body>
 
-<header class="header">
+<header>
 
-<div class="container">
-
-<a href="#" class="logo">
-Sentra <span>Ukir</span>
-</a>
+<div class="logo">
+Sentra Ukir Jayapura
+</div>
 
 <nav>
-
-<a href="#home">Home</a>
-<a href="#about">Tentang</a>
-<a href="#services">Layanan</a>
-<a href="#gallery">Galeri</a>
-<a href="#contact">Kontak</a>
-
+<a href="#tentang">Tentang</a>
+<a href="#layanan">Layanan</a>
+<a href="#galeri">Galeri</a>
+<a href="#kontak">Kontak</a>
 </nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Jasa Cutting CNC & Advertising Jayapura</h1>
+
+<p>
+Melayani kebutuhan cutting CNC, ACP, PVC, MDF, Akrilik, HPL, Kayu, Triplex, Plat Besi, Galvanis hingga pembuatan papan nama, huruf timbul, neon box dan berbagai kebutuhan branding usaha.
+</p>
 
 <a href="https://wa.me/6281240953965" class="btn">
 Hubungi Kami
@@ -38,186 +176,96 @@ Hubungi Kami
 
 </div>
 
-</header>
+</section>
 
-<section class="hero" id="home">
+<section id="tentang">
 
-<div class="container hero-grid">
+<h2 class="title">Tentang Kami</h2>
 
-<div>
-
-<h1>
-Jasa CNC Cutting & Advertising di Jayapura
-</h1>
-
-<p>
-
-Melayani jasa CNC Router, Cutting ACP, PVC, MDF, Akrilik, HPL, Kayu, Triplex, Plat Besi, Galvanis, Huruf Timbul, Neon Box, Papan Nama dan berbagai kebutuhan branding usaha.
-
+<p style="text-align:center;max-width:850px;margin:auto;">
+Sentra Ukir Jayapura merupakan penyedia jasa CNC Cutting dan Advertising profesional di Jayapura. Kami mengutamakan kualitas, ketepatan waktu, serta hasil presisi untuk kebutuhan bisnis, kantor, toko, café, rumah ibadah hingga proyek pemerintahan.
 </p>
-
-<div class="hero-button">
-
-<a href="https://wa.me/6281240953965" class="btn">
-Order Sekarang
-</a>
-
-<a href="#services" class="btn-outline">
-Lihat Layanan
-</a>
-
-</div>
-
-</div>
-
-<div>
-
-<img src="images/hero.png" alt="Sentra Ukir Jayapura">
-
-</div>
-
-</div>
 
 </section>
 
-<section id="about" class="about">
+<section id="layanan">
 
-<div class="container">
+<h2 class="title">Layanan Kami</h2>
 
-<h2>Tentang Kami</h2>
-
-<p>
-
-Sentra Ukir Jayapura merupakan penyedia jasa CNC Cutting dan Advertising profesional yang melayani kebutuhan perusahaan, UMKM, sekolah, kantor, instansi hingga proyek custom dengan hasil rapi dan presisi.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<div class="container">
-
-<h2>Layanan Kami</h2>
-
-<div class="cards">
+<div class="services">
 
 <div class="card">
-
-<i class="fa-solid fa-compass-drafting"></i>
-
 <h3>CNC Router</h3>
-
-<p>Cutting MDF, PVC, Kayu, ACP, Akrilik, HPL dan Triplex.</p>
-
+<p>Cutting MDF, PVC, Kayu, HPL, Triplex, ACP dan Akrilik.</p>
 </div>
 
 <div class="card">
-
-<i class="fa-solid fa-layer-group"></i>
-
 <h3>Huruf Timbul</h3>
-
-<p>Akrilik, Stainless, Galvanis dan ACP.</p>
-
+<p>Stainless, Akrilik, Galvanis dan ACP.</p>
 </div>
 
 <div class="card">
-
-<i class="fa-solid fa-sign-hanging"></i>
-
 <h3>Papan Nama</h3>
-
-<p>Papan nama kantor, toko dan instansi.</p>
-
+<p>Papan nama kantor, toko, sekolah dan instansi.</p>
 </div>
 
 <div class="card">
-
-<i class="fa-solid fa-lightbulb"></i>
-
 <h3>Neon Box</h3>
-
 <p>Pembuatan Neon Box LED berbagai ukuran.</p>
-
 </div>
 
 <div class="card">
+<h3>Ornamen Dinding</h3>
+<p>Desain interior dan dekorasi custom.</p>
+</div>
 
-<i class="fa-solid fa-pen-ruler"></i>
-
+<div class="card">
 <h3>Custom Design</h3>
-
-<p>Desain sesuai kebutuhan pelanggan.</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-building"></i>
-
-<h3>Advertising</h3>
-
-<p>Branding toko, kantor, cafe dan usaha.</p>
-
-</div>
-
+<p>Melayani desain sesuai kebutuhan pelanggan.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="gallery">
+<section id="galeri">
 
-<div class="container">
-
-<h2>Galeri Proyek</h2>
+<h2 class="title">Galeri Pekerjaan</h2>
 
 <div class="gallery">
 
-<img src="images/1.jpg">
-<img src="images/2.jpg">
-<img src="images/3.jpg">
-<img src="images/4.jpg">
-<img src="images/5.jpg">
-<img src="images/6.jpg">
-
-</div>
+<img src="https://picsum.photos/600/400?1">
+<img src="https://picsum.photos/600/400?2">
+<img src="https://picsum.photos/600/400?3">
+<img src="https://picsum.photos/600/400?4">
+<img src="https://picsum.photos/600/400?5">
+<img src="https://picsum.photos/600/400?6">
 
 </div>
 
 </section>
 
-<section id="contact">
+<section id="kontak" class="contact">
 
-<div class="container">
+<h2 class="title">Hubungi Kami</h2>
 
-<h2>Hubungi Kami</h2>
+<h3>📍 Sentra Ukir Jayapura</h3>
 
-<p>WhatsApp : 08114901407</p>
+<p>WhatsApp : 0811-4901-407</p>
+
+<br>
 
 <a href="https://wa.me/628114901407" class="btn">
-Chat WhatsApp
+Order Sekarang
 </a>
-
-</div>
 
 </section>
 
 <footer>
 
-<p>
-
-© 2026 Sentra Ukir Jayapura. All Rights Reserved.
-
-</p>
+© 2026 Sentra Ukir Jayapura • Jasa Cutting CNC & Advertising
 
 </footer>
 
-<script src="js/script.js"></script>
-
 </body>
-</html>
+  </html>
