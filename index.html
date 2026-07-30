@@ -1,323 +1,223 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentra Ukir Jayapura - Workshop Cutting CNC, Router, Laser, Plasma</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('https://via.placeholder.com/1920x1080?text=Workshop+Background') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentra Ukir Jayapura | CNC Cutting & Advertising</title>
 
-        header {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            animation: fadeIn 1s ease-in;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffcc00;
-        }
-
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            background: rgba(0, 0, 0, 0.5);
-            animation: fadeIn 2s ease-in;
-        }
-
-        .hero h2 {
-            font-size: 4rem; /* Judul besar */
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-            animation: typeWriter 3s steps(40, end);
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid white;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .cnc-animation {
-            position: absolute;
-            bottom: 20%;
-            right: 10%;
-        }
-
-        .router {
-            width: 50px;
-            height: 50px;
-            background: url('https://via.placeholder.com/50x50?text=CNC+Router') no-repeat;
-            animation: moveRouter 3s infinite;
-        }
-
-        .laser-beam {
-            width: 2px;
-            height: 100px;
-            background: red;
-            margin-top: 10px;
-            animation: pulse 1s infinite;
-        }
-
-        @keyframes moveRouter {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(20px); }
-            100% { transform: translateX(0); }
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes typeWriter {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        .section {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1rem;
-            animation: fadeIn 1s ease-in;
-        }
-
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 1rem auto;
-            display: block;
-            animation: fadeIn 2s ease-in;
-        }
-
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .service {
-            flex: 1 1 200px;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-
-        .service:hover {
-            transform: scale(1.05);
-        }
-
-        .materials {
-            list-style: disc;
-            padding-left: 1rem;
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .gallery img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            font-size: 2rem;
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #ffcc00;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            animation: fadeIn 1s ease-in;
-        }
-    </style>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <h1>Sentra Ukir Jayapura</h1>
-            <p>Workshop Jasa Cutting CNC, Router, Laser, Plasma</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#tentang">Tentang Kami</a></li>
-                <li><a href="#layanan">Layanan Kami</a></li>
-                <li><a href="#bahan">Bahan Cutting</a></li>
-                <li><a href="#galeri">Foto Kerja</a></li>
-                <li><a href="#kontak">Alamat & Maps</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h2>Selamat Datang di Sentra Ukir Jayapura</h2>
-            <p>Kami menyediakan jasa cutting presisi untuk berbagai kebutuhan.</p>
-        </div>
-        <div class="cnc-animation">
-            <!-- Animasi CNC sederhana -->
-            <div class="router"></div>
-            <div class="laser-beam"></div>
-        </div>
-    </section>
+<header class="header">
 
-    <section id="tentang" class="section">
-        <h2>Tentang Kami</h2>
-        <img src="https://via.placeholder.com/200x200?text=Foto+Profil+Workshop" alt="Foto Profil Workshop" class="profile-photo">
-        <p>Sentra Ukir Jayapura adalah workshop terdepan di Jayapura yang spesialis dalam jasa cutting menggunakan teknologi CNC, router, laser, dan plasma. Dengan pengalaman bertahun-tahun, kami berkomitmen untuk memberikan hasil presisi tinggi untuk proyek-proyek kayu, logam, akrilik, dan bahan lainnya. Tim kami terdiri dari ahli yang terampil, menggunakan mesin modern untuk memastikan kualitas terbaik.</p>
-    </section>
+<div class="container">
 
-    <section id="layanan" class="section">
-        <h2>Layanan Kami</h2>
-        <div class="services">
-            <div class="service">
-                <h3>CNC Cutting</h3>
-                <p>Pemotongan presisi menggunakan mesin CNC untuk bahan kayu, plastik, dan logam. Cocok untuk prototipe dan produksi massal.</p>
-            </div>
-            <div class="service">
-                <h3>Router Cutting</h3>
-                <p>Jasa routing untuk ukiran detail pada kayu dan komposit. Ideal untuk furniture dan dekorasi.</p>
-            </div>
-            <div class="service">
-                <h3>Laser Cutting</h3>
-                <p>Pemotongan laser untuk bahan tipis seperti akrilik, kertas, dan kain. Akurat dan cepat tanpa kontak fisik.</p>
-            </div>
-            <div class="service">
-                <h3>Plasma Cutting</h3>
-                <p>Pemotongan plasma untuk logam tebal seperti baja dan aluminium. Digunakan untuk konstruksi dan industri.</p>
-            </div>
-        </div>
-    </section>
+<a href="#" class="logo">
+Sentra <span>Ukir</span>
+</a>
 
-    <section id="bahan" class="section">
-        <h2>Bahan Cutting</h2>
-        <ul class="materials">
-            <li>Kayu (plywood, MDF, solid wood)</li>
-            <li>Logam (baja, aluminium, stainless steel)</li>
-            <li>Akrilik dan plastik</li>
-            <li>Kaca dan keramik</li>
-            <li>Kain dan kulit</li>
-            <li>Komposit dan foam</li>
-        </ul>
-        <p>Kami menerima bahan custom sesuai permintaan. Hubungi kami untuk konsultasi.</p>
-    </section>
+<nav>
 
-    <section id="galeri" class="section">
-        <h2>Foto Kerja</h2>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/300x200?text=CNC+Cutting+Kayu" alt="CNC Cutting Kayu">
-            <img src="https://via.placeholder.com/300x200?text=Laser+Cutting+Akrilik" alt="Laser Cutting Akrilik">
-            <img src="https://via.placeholder.com/300x200?text=Plasma+Cutting+Logam" alt="Plasma Cutting Logam">
-            <img src="https://via.placeholder.com/300x200?text=Router+Ukiran" alt="Router Ukiran">
-        </div>
-        <p>Ganti gambar placeholder ini dengan foto kerja asli Anda.</p>
-    </section>
+<a href="#home">Home</a>
+<a href="#about">Tentang</a>
+<a href="#services">Layanan</a>
+<a href="#gallery">Galeri</a>
+<a href="#contact">Kontak</a>
 
-    <section id="kontak" class="section">
-        <h2>Alamat & Google Maps</h2>
-        <p>Alamat: Jl. Contoh No. 123, Jayapura, Papua, Indonesia</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789012!2d140.718123456789!3d-2.531234567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMzInMDQuNCJTIDE0MMKwNDMnMDcuMyJF!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <p>Ganti embed ini dengan alamat Google Maps asli workshop Anda. Cari di Google Maps, klik "Share", pilih "Embed a map".</p>
-        
-        <h3>Hubungi Kami</h3>
-        <div class="social-links">
-            <a href="https://wa.me/628xxxxxxxxx" target="_blank" title="WhatsApp">📱 WhatsApp</a>
-            <a href="https://www.instagram.com/sentraukirjayapura" target="_blank" title="Instagram">📷 Instagram</a>
-            <a href="https://www.tiktok.com/@sentraukirjayapura" target="_blank" title="TikTok">🎥 TikTok</a>
-        </div>
-    </section>
+</nav>
 
-    <footer>
-        <p>&copy; 2023 Sentra Ukir Jayapura. Semua hak dilindungi.</p>
-    </footer>
+<a href="https://wa.me/6281240953965" class="btn">
+Hubungi Kami
+</a>
 
-    <script>
-        // Smooth scrolling untuk navigasi
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+</div>
 
-        // Intersection Observer untuk animasi fade-in saat scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        });
+</header>
 
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<h1>
+Jasa CNC Cutting & Advertising di Jayapura
+</h1>
+
+<p>
+
+Melayani jasa CNC Router, Cutting ACP, PVC, MDF, Akrilik, HPL, Kayu, Triplex, Plat Besi, Galvanis, Huruf Timbul, Neon Box, Papan Nama dan berbagai kebutuhan branding usaha.
+
+</p>
+
+<div class="hero-button">
+
+<a href="https://wa.me/6281240953965" class="btn">
+Order Sekarang
+</a>
+
+<a href="#services" class="btn-outline">
+Lihat Layanan
+</a>
+
+</div>
+
+</div>
+
+<div>
+
+<img src="images/hero.png" alt="Sentra Ukir Jayapura">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<div class="container">
+
+<h2>Tentang Kami</h2>
+
+<p>
+
+Sentra Ukir Jayapura merupakan penyedia jasa CNC Cutting dan Advertising profesional yang melayani kebutuhan perusahaan, UMKM, sekolah, kantor, instansi hingga proyek custom dengan hasil rapi dan presisi.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<h2>Layanan Kami</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-compass-drafting"></i>
+
+<h3>CNC Router</h3>
+
+<p>Cutting MDF, PVC, Kayu, ACP, Akrilik, HPL dan Triplex.</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-layer-group"></i>
+
+<h3>Huruf Timbul</h3>
+
+<p>Akrilik, Stainless, Galvanis dan ACP.</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-sign-hanging"></i>
+
+<h3>Papan Nama</h3>
+
+<p>Papan nama kantor, toko dan instansi.</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+<h3>Neon Box</h3>
+
+<p>Pembuatan Neon Box LED berbagai ukuran.</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-pen-ruler"></i>
+
+<h3>Custom Design</h3>
+
+<p>Desain sesuai kebutuhan pelanggan.</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-building"></i>
+
+<h3>Advertising</h3>
+
+<p>Branding toko, kantor, cafe dan usaha.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<div class="container">
+
+<h2>Galeri Proyek</h2>
+
+<div class="gallery">
+
+<img src="images/1.jpg">
+<img src="images/2.jpg">
+<img src="images/3.jpg">
+<img src="images/4.jpg">
+<img src="images/5.jpg">
+<img src="images/6.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<h2>Hubungi Kami</h2>
+
+<p>WhatsApp : 08114901407</p>
+
+<a href="https://wa.me/628114901407" class="btn">
+Chat WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Sentra Ukir Jayapura. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
